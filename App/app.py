@@ -79,7 +79,9 @@ while listiterator.hasNext(iter):
     u = listiterator.next(iter)
     suma_vote_average = suma_vote_average + float(u["vote_average"])
 
-promedio_peliculas = suma_vote_average/numero_de_peliculas_director
+promedio_peliculas = 0
+if(numero_de_peliculas_director > 0):
+    promedio_peliculas = suma_vote_average/numero_de_peliculas_director
 
 # 5) Imprimir resultados
 
